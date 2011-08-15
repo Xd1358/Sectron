@@ -14,6 +14,8 @@ import sqlite3 as sqlite
 try:
 	if config.lang == "en":
 		import lang.en as lang
+	if config.lang == "fi":
+		import lang.fi as lang
 except ImportError:
 	print "Weird Error importing Languages. Please come to #Sectron on irc.freenode.net for help"
 	sys.exit(1)

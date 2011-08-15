@@ -12,6 +12,8 @@ except ImportError:
 try:
 	if config.lang == "en":
 		import lang.en as lang
+	if config.lang == "fi":
+		import lang.fi as lang
 except ImportError:
 	print "A Very weird eeor occured with Languages. Try help at #Sectron on irc.freenode.net"
 	sys.exit(1)
