@@ -1,0 +1,2 @@
+This file makes sure that this folder will not be removed. Made because of .gitignore
+entry "db/*".
