@@ -1,3 +1,5 @@
 db/*
 config.py
-
+*.pyc
+modules/*.pyc
+lang/*.pyc
