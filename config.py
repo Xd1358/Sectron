@@ -8,9 +8,10 @@ sid = "31D"
 mainclientnick = "Sectron"
 mainclienthost = "services."
 mainclientgekos = "Sectron IRC GateKeeper"
-mainclientuser = "sectron"
+mainclientuser = "Sectron"
 reportchan = "#test"
-onloadmods = 'NickServ HostServ' #seperate module names with spaces - if you don't want to load any modules, just set it to onloadmodules = ''
+onloadmods = '' #seperate module names with spaces - if you don't want to load any modules, just set it to onloadmodules = ''
+lang = "en"
 
 nickservnick = "NickServ"
 nickservuser = "NickServ"
@@ -21,3 +22,8 @@ hostservnick = "HostServ"
 hostservuser = "HostServ"
 hostservhost = "services."
 hostservgecos = "Host Services"
+
+chanservnick = "ChanServ"
+chanservuser = "ChanServ"
+chanservhost = "services."
+chansergecos = "Channel Services"

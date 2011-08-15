@@ -1,0 +1,42 @@
+# The Uplink Settings
+
+linkip = "127.0.0.1" 			# IP of the Link
+servername = "services."		# ServerName
+serverdesc = "Sectron IRC services"	# Server Description
+linkport = 6666				# Port it should connect to
+linkpassword = "jellybeans"		# Link password
+sid = "31D"				# Server ID - If unsure leave it as it is
+
+#Main GateKeeper Client settings
+
+mainclientnick = "Sectron"		# Gate Keeper Nick
+mainclienthost = "services."		# Gate Keeper Host
+mainclientgekos = "Sectron IRC GateKeeper"	#Gate Keeper RealName
+mainclientuser = "Sectron"		# Ident
+
+#General
+
+reportchan = "#test"			# Services Channel
+onloadmods = 'HostServ NickServ'	# Seperate with Spaces , If None leave it as ''
+lang = "en"				# LanguagePack to use - Most IRC Networks use EN
+
+# NickServ
+
+nickservnick = "NickServ"
+nickservuser = "NickServ"
+nickservhost = "services."
+nickservgecos = "Nickname Services"
+
+# HostServ
+
+hostservnick = "HostServ"
+hostservuser = "HostServ"
+hostservhost = "services."
+hostservgecos = "Host Services"
+
+# ChanServ
+
+chanservnick = "ChanServ"
+chanservuser = "ChanServ"
+chanservhost = "services."
+chansergecos = "Channel Services"
