@@ -1,4 +1,4 @@
-# English Language Pack for Securon
+# English Language Pack for Sectron
 
 IDENTIFY_SUCCESS = "You are now identified for \x02%s\x02"
 REGISTER_SUCCESS = "Thanks for registering."
