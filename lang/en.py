@@ -7,5 +7,5 @@ IS_ALREADY_REGGED = "\x02%s\x02 is already registered."
 INVALID_PASSOWRD = "Invalid Password."
 NOW_LOGGEDOUT = "You are now logged out."
 
-NO_PERMS = "You are not allowed to do this operation."
+NO_PERMS = "You are not allowed to perform this operation."
 VHOST_SUCCESS = "The selected account is now vhosted."
