@@ -71,14 +71,14 @@ def onPrivmsg(self,target,uid,nick,host,realhost,account,message):
 							self.chghost(uid,str(row[3]))
 						self.sendnotice(self.nickserv,uid,lang.IDENTIFY_SUCCESS % account)
 					else:
-						self.sendnotice(self.nickserv,uid,"Invalid Password.")
+						self.sendnotice(self.nickserv,uid,lang.INVALID_PASSWORD)
 				self.nickservconnect.close()
 			except Exception,e:
 				self.sendnotice(self.nickserv,uid,"Syntax: \x02" + msplit[0] + " <password>\x02")
 				print e
 		elif msplit[0].lower() == "logout":
 			self.accountlogout(uid)
-			self.sendnotice(self.nickserv,uid,"You are now logged out.")
+			self.sendnotice(self.nickserv,uid,lang.NOW_LOGGEDOUT)
 		elif msplit[0].lower() == "help":
 			self.sendnotice(self.nickserv,uid,"\x02***NickServ Help***\x02")
 			self.sendnotice(self.nickserv,uid,"\x02NickServ\x02 allows you to 'register' a nickname, it is not needed to use it, but ")

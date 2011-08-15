@@ -10,6 +10,14 @@ try:
 except ImportError:
 	pass
 import sqlite3 as sqlite
+try:
+	if config.lang == "en":
+		import lang.en as lang
+	if config.lang == "fi":
+		import lang.fi as lang
+except ImportError:
+	print "Weird Error importing Languages. Please come to #Sectron on irc.freenode.net for help"
+	sys.exit(1)
 
 def modinit(self):
 	self.hostserv = self.createclient(config.hostservnick,config.hostservuser,config.hostservhost,config.hostservgecos)
@@ -32,14 +40,14 @@ def onPrivmsg(self,target,uid,nick,host,realhost,account,message):
 						tuid = row[4]
 					self.chghost(tuid, newhost)
 					self.sendprivmsg(self.hostserv, self.reportchan, "VHost: Account \x02" + account + "\x02 <=> VHost \x02" + newhost + "\x02")
-					self.sendnotice(self.hostserv, uid,"The account you selected has been vhosted.")
+					self.sendnotice(self.hostserv, uid,lang.VHOST_SUCCESS)
 					self.hostservconnect.commit()
 					self.hostservconnect.close()
 				except Exception,e:
 					self.sendnotice(self.hostserv, uid, "Syntax: \x02vhost <account> <vhost>\x02")
 					print e
 			else:
-				seld.sendnotice(self.hostserv, uid,"You are not allowed to preform this operation.")
+				seld.sendnotice(self.hostserv, uid,lang.NO_PERMS)
 
 def moddeinit(self):
 	self.destroyclient(self.hostserv,"Shutting Down")
